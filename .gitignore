@@ -25,5 +25,8 @@ out/
 .npm
 package-lock.json
 node_modules
-/docker-compose/volumes*
+
+### Docker
+/docker-compose/redis/volumes/*
+/docker-compose/postgres/volumes/*
 

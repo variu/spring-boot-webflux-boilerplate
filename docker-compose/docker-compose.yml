@@ -1,0 +1,27 @@
+version: "3"
+services:
+  mysql:
+    image: postgres:14.2-alpine
+    container_name: postgres
+    ports:
+      - "15432:5432"
+    restart: always
+    environment:
+      - POSTGRES_DB=dev
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./postgres/volumes/data:/var/lib/postgresql/data
+      - ./postgres/init:/docker-entrypoint-initdb.d
+
+  redis:
+    image: redis:6.2-alpine
+    container_name: redis
+    restart: always
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    ports:
+      - "16379:6379"
+    volumes:
+      - ./redis/volumes:/data
