@@ -36,6 +36,10 @@ subprojects {
         mavenCentral()
     }
 
+    ext {
+        set('fixtureMonkeyVersion', "0.3.2")
+    }
+
     dependencies {
 //        implementation 'org.springframework.boot:spring-boot-starter-actuator'
         implementation 'org.springframework.boot:spring-boot-starter-log4j2'
@@ -64,6 +68,11 @@ subprojects {
             exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
         }
         testImplementation 'org.junit.platform:junit-platform-launcher:1.8.2'
+
+        testImplementation("com.navercorp.fixturemonkey:fixture-monkey-starter:${fixtureMonkeyVersion}") {
+            exclude group: 'ch.qos.logback', module: 'logback-classic'
+        }
+        testImplementation "com.navercorp.fixturemonkey:fixture-monkey-mockito:${fixtureMonkeyVersion}"
     }
 
     test {

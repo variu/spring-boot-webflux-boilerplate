@@ -5,7 +5,7 @@
 
 # Dev Env
 
-- Spring Boot 2.6.5
+- Spring Boot 2.6.3
 - Java 17
 - Postgres 14.2
 - Redis 6.2
@@ -23,8 +23,11 @@ docker-compose up -d
 
 # Todo
 
-- Vault config
+- Vault Config
 - Webflux Router (for custom validation in dto)
-- IntelliJ Settings
+- IntelliJ Settings Share
 - Block hound
 - Test Container
+- R2DBC Json Converter
+- Spring Security
+- Spring Batch(Spring Data JDBC)

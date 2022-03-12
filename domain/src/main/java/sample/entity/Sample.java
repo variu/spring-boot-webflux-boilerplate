@@ -5,10 +5,11 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Length;
 import org.springframework.data.relational.core.mapping.Table;
+import sample.dto.SampleCreatable;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -16,11 +17,11 @@ import javax.validation.constraints.NotBlank;
 public class Sample extends AbstractIdAuditable {
 
   @NotBlank
-  @Length(min = 1, max = 255)
+  @Size(min = 1, max = 255)
   private String sampleName;
 
   @Builder
-  private Sample(String sampleName) {
-    this.sampleName = sampleName;
+  private Sample(SampleCreatable creatable) {
+    this.sampleName = creatable.getSampleName();
   }
 }
