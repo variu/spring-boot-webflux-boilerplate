@@ -10,6 +10,10 @@
 - Postgres 14.2
 - Redis 6.2
 
+# Prerequirement
+
+- docker & docker-compose
+
 # Init
 
 ```
@@ -21,3 +25,6 @@ docker-compose up -d
 
 - Vault config
 - Webflux Router (for custom validation in dto)
+- IntelliJ Settings
+- Block hound
+- Test Container

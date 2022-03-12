@@ -1,0 +1,22 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://admin:1234@localhost:15432/dev
+    pool:
+      initial-size: 10
+      max-size: 30
+      validation-query: select 1
+      enabled: true
+  redis:
+    host: localhost
+    lettuce:
+      pool:
+        enabled: true
+    port: 16379
+  data:
+    redis:
+      repositories:
+        enabled: false
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:sql/schema/*.sql

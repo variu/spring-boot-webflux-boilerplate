@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: local
+  config:
+    import: classpath:application.yml, classpath:application-database.yml
+  webflux:
+    multipart:
+      streaming: false
+      headers-charset: UTF-8
+  main:
+    banner-mode: off
+    lazy-initialization: false
+    allow-circular-references: false
+  netty:
+    leak-detection: advanced
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+  shutdown: graceful
