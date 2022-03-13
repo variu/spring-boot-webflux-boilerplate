@@ -1,5 +1,7 @@
+apply from: 'jacoco.gradle'
+
 dependencies {
-    
+
 }
 
 bootJar.enabled = false

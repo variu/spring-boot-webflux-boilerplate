@@ -1,4 +1,4 @@
-package common;
+package info.jakepark.common;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,7 +8,7 @@ import javax.validation.constraints.Min;
 
 @Getter
 @NoArgsConstructor
-public abstract class AbstractIdAuditable {
+public abstract class AbstractIdAuditable extends AbstractAuditable {
   @Min(0)
   @Id
   protected Long id;

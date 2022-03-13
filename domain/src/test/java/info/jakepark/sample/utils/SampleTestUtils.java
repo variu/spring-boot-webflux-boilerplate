@@ -1,8 +1,8 @@
-package sample.utils;
+package info.jakepark.sample.utils;
 
-import common.FixtureMonkeyUtils;
+import info.jakepark.common.FixtureMonkeyUtils;
+import info.jakepark.sample.entity.Sample;
 import net.jqwik.api.Arbitraries;
-import sample.entity.Sample;
 
 public abstract class SampleTestUtils {
 

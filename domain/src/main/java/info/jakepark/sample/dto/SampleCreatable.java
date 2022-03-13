@@ -1,4 +1,4 @@
-package sample.dto;
+package info.jakepark.sample.dto;
 
 public interface SampleCreatable {
   String getSampleName();

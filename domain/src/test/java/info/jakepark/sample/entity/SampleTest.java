@@ -1,10 +1,10 @@
-package sample.entity;
+package info.jakepark.sample.entity;
 
-import common.FixtureMonkeyUtils;
+import info.jakepark.common.FixtureMonkeyUtils;
+import info.jakepark.sample.dto.SampleCreatable;
 import net.jqwik.api.Arbitraries;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.RepeatedTest;
-import sample.dto.SampleCreatable;
 
 public class SampleTest {
   @RepeatedTest(10)

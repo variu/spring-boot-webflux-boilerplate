@@ -1,13 +1,13 @@
-package sample.repository;
+package info.jakepark.sample.repository;
 
-import config.R2dbcAuditingConfig;
+import info.jakepark.config.R2dbcAuditingConfig;
+import info.jakepark.sample.entity.Sample;
+import info.jakepark.sample.utils.SampleTestUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.r2dbc.DataR2dbcTest;
 import org.springframework.context.annotation.Import;
-import sample.entity.Sample;
-import sample.utils.SampleTestUtils;
 
 @DataR2dbcTest
 @Import(R2dbcAuditingConfig.class)

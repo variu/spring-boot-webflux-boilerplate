@@ -1,0 +1,32 @@
+apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = "0.8.7"
+}
+
+jacocoTestReport {
+    reports {
+        html.enabled true
+        xml.enabled false
+        html.destination file("${buildDir}/jacoco/html")
+        xml.destination file("$buildDir/jacoco/jacoco.xml")
+    }
+
+    finalizedBy 'jacocoTestCoverageVerification'
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.50
+            }
+        }
+        rule {
+            enabled = true
+            element = 'CLASS'
+        }
+    }
+}
+
+test.finalizedBy jacocoTestReport

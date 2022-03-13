@@ -1,4 +1,4 @@
-package common;
+package info.jakepark.common;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;

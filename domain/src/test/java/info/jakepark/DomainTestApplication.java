@@ -1,4 +1,4 @@
-package sample;
+package info.jakepark;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

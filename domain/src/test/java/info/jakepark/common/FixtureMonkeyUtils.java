@@ -1,4 +1,4 @@
-package common;
+package info.jakepark.common;
 
 import com.navercorp.fixturemonkey.FixtureMonkey;
 import com.navercorp.fixturemonkey.generator.FieldReflectionArbitraryGenerator;

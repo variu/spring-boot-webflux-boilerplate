@@ -10,6 +10,10 @@
 - Postgres 14.2
 - Redis 6.2
 
+# Test Tool
+
+- [Fixture Monkey](https://naver.github.io/fixture-monkey/)
+
 # Prerequirement
 
 - docker & docker-compose
@@ -24,10 +28,11 @@ docker-compose up -d
 # Todo
 
 - Vault Config
-- Webflux Router (for custom validation in dto)
+- Webflux Router (for custom validation in controller dto)
 - IntelliJ Settings Share
-- Block hound
+- Block Hound
 - Test Container
 - R2DBC Json Converter
 - Spring Security
 - Spring Batch(Spring Data JDBC)
+- branch for dependency version

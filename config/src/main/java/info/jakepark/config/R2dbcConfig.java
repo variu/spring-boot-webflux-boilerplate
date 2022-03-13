@@ -1,5 +1,6 @@
-package config;
+package info.jakepark.config;
 
+import info.jakepark.properties.DataBaseProperties;
 import io.r2dbc.pool.ConnectionPool;
 import io.r2dbc.pool.ConnectionPoolConfiguration;
 import io.r2dbc.spi.ConnectionFactories;
@@ -9,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.r2dbc.config.AbstractR2dbcConfiguration;
 import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import properties.DataBaseProperties;
 
 @Configuration(proxyBeanMethods = false)
 @EnableTransactionManagement

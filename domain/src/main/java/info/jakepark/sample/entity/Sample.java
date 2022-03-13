@@ -1,12 +1,12 @@
-package sample.entity;
+package info.jakepark.sample.entity;
 
-import common.AbstractIdAuditable;
+import info.jakepark.common.AbstractIdAuditable;
+import info.jakepark.sample.dto.SampleCreatable;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.relational.core.mapping.Table;
-import sample.dto.SampleCreatable;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
