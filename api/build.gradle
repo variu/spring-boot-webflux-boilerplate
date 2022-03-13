@@ -1,0 +1,11 @@
+apply from: 'jacoco.gradle'
+
+dependencies {
+    implementation project(':domain')
+
+    implementation 'org.springdoc:springdoc-openapi-webflux-ui:1.6.6'
+
+    testImplementation(testFixtures(project(":domain")))
+}
+
+jar.enabled = false

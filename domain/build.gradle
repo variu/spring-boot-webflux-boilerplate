@@ -1,7 +1,20 @@
+plugins {
+    id "java-test-fixtures"
+}
+
 apply from: 'jacoco.gradle'
 
 dependencies {
     implementation project(':config')
+
+    testFixturesCompileOnly 'org.projectlombok:lombok'
+    testFixturesCompileOnly "com.navercorp.fixturemonkey:fixture-monkey-starter:${fixtureMonkeyVersion}"
+    testFixturesCompileOnly "com.navercorp.fixturemonkey:fixture-monkey-mockito:${fixtureMonkeyVersion}"
+    testFixturesAnnotationProcessor 'org.projectlombok:lombok'
+
+    testFixturesCompileOnly 'org.springframework.boot:spring-boot-starter-test'
+    testFixturesCompileOnly 'org.springframework.boot:spring-boot-starter-webflux'
+    testFixturesCompileOnly 'io.projectreactor:reactor-test'
 }
 
 bootJar.enabled = false

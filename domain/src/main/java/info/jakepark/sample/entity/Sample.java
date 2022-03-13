@@ -2,6 +2,7 @@ package info.jakepark.sample.entity;
 
 import info.jakepark.common.AbstractIdAuditable;
 import info.jakepark.sample.dto.SampleCreatable;
+import info.jakepark.sample.dto.SampleUpdatable;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -23,5 +24,10 @@ public class Sample extends AbstractIdAuditable {
   @Builder
   private Sample(SampleCreatable creatable) {
     this.sampleName = creatable.getSampleName();
+  }
+
+  public Sample update(SampleUpdatable updatable) {
+    this.sampleName = updatable.getSampleName();
+    return this;
   }
 }
