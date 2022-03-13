@@ -2,7 +2,7 @@ package info.jakepark.sample.repository;
 
 import info.jakepark.config.R2dbcAuditingConfig;
 import info.jakepark.sample.entity.Sample;
-import info.jakepark.sample.utils.SampleTestUtils;
+import info.jakepark.sample.utils.SampleTestData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class SampleRepositoryTest {
 
   @Test
   public void create() {
-    Sample target = SampleTestUtils.getEntity();
+    Sample target = SampleTestData.getEntity();
     Sample entity = sampleRepository.save(target).block();
 
     Assertions.assertNotNull(entity);

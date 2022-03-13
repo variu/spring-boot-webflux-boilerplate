@@ -4,7 +4,7 @@ import info.jakepark.common.FixtureMonkeyUtils;
 import info.jakepark.sample.entity.Sample;
 import net.jqwik.api.Arbitraries;
 
-public abstract class SampleTestUtils {
+public abstract class SampleTestData {
 
   public static Sample getEntity() {
     return FixtureMonkeyUtils.monkey()
