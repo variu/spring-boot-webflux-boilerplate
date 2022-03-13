@@ -16,6 +16,15 @@ jacocoTestReport {
 }
 
 jacocoTestCoverageVerification {
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                    "*Application",
+                    "**/dto/*",
+                    "**/config/*"
+            ])
+        }))
+    }
     violationRules {
         rule {
             limit {
@@ -54,6 +63,8 @@ jacocoTestCoverageVerification {
                 value = 'TOTALCOUNT'
                 maximum = 500
             }
+
+            includes = ['**.*Controller', '**.*Service']
 
         }
     }

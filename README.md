@@ -28,8 +28,10 @@ docker-compose up -d
 
 # Todo
 
+- Mockito
 - Common Response Handler
 - Common Error Handler
+- Custom Repository
 - Vault Config
 - Webflux Router (for custom validation in controller dto)
 - IntelliJ Settings Share

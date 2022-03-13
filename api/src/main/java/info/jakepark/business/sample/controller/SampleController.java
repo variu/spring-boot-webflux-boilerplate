@@ -4,7 +4,6 @@ import info.jakepark.business.sample.service.SampleService;
 import info.jakepark.sample.dto.SampleDto;
 import info.jakepark.sample.entity.Sample;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -12,8 +11,8 @@ import reactor.core.publisher.Mono;
 import javax.validation.Valid;
 
 @RequiredArgsConstructor
-@RequestMapping("/sample")
-@Controller
+@RequestMapping("/api/v1/sample")
+@RestController
 public class SampleController {
   private final SampleService sampleService;
 

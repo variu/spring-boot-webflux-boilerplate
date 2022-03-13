@@ -56,7 +56,7 @@ public class SampleServiceTest {
   }
 
   @Test
-  void test04_findAllById() {
+  void test04_findById() {
     service
         .findById(sample.getId())
         .as(StepVerifier::create)

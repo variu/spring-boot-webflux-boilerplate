@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: jake-park-domain
+  main:
+    web-application-type: none

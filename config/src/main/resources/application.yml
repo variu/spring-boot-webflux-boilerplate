@@ -2,7 +2,7 @@ spring:
   profiles:
     active: local
   config:
-    import: classpath:application.yml, classpath:application-database.yml
+    import: classpath:application.yml, classpath:application-database.yml, classpath:application-app.yml
   webflux:
     multipart:
       streaming: false

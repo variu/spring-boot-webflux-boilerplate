@@ -15,6 +15,7 @@ dependencies {
     testFixturesCompileOnly 'org.springframework.boot:spring-boot-starter-test'
     testFixturesCompileOnly 'org.springframework.boot:spring-boot-starter-webflux'
     testFixturesCompileOnly 'io.projectreactor:reactor-test'
+    testFixturesCompileOnly 'io.projectreactor.addons:reactor-extra'
 }
 
 bootJar.enabled = false

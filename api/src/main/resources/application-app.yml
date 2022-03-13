@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: jake-park-api
+
+server:
+  port: 18080
+
+springdoc:
+  cache:
+    disabled: true
+  swagger-ui:
+    path: /api-docs
+    operations-sorter: method
